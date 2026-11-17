@@ -52,3 +52,17 @@ GNU libc (LGPL), GNU Bash (GPL), GCC runtime libraries (GPL with the GCC Runtime
 Library Exception), and the X11, Mesa, LLVM, compression and font dependencies.
 The application package also carries the bundled font notices extracted from
 `epaint_default_fonts` 0.29.1. Preserve these notices when redistributing outputs.
+
+## Published binary metadata
+
+The following exact outputs have signed narinfos on the public substitute server:
+
+| Package | Binary metadata |
+| --- | --- |
+| MatLivre 0.1.9 | [Signed narinfo](https://substitutes.securityops.co/6b85iyadfmghdwk7gyv35vypv0s8r2a2.narinfo) |
+| MatLibre for Emacs 0.1.0 | [Signed narinfo](https://substitutes.securityops.co/fa073k7svr022papcnw35np5z3gkr3m3.narinfo) |
+
+These refer to the Guix revision documented above. A build using another
+Guix revision may produce different store paths and need different substitutes.
+The Emacs library output and its propagated application dependency are separate
+outputs; both are needed for installation through the package recipe.
