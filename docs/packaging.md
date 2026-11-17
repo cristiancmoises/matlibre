@@ -35,3 +35,20 @@ narinfo from the intended publisher. Dependency/channel revisions must match.
 Do not infer public substitute availability from a successful build.
 
 Upstream: https://github.com/campuslivre/matlivre/releases/tag/v0.1.9
+
+## Corresponding source for the published binary inputs
+
+The first verified binary outputs were built with GNU Guix commit
+`80e64a9845c1f2ede332b29a5270aacc6df196f5`. Its package definitions and
+patches are available in the [Guix source tree](https://git.guix.gnu.org/guix.git/commit/?id=80e64a9845c1f2ede332b29a5270aacc6df196f5).
+The additional build instructions are in this repository's
+`securityops/packages/matlivre.scm`; GNU libc 2.43 is fetched from its pinned
+upstream source archive and retains the applicable Guix patches. MatLivre's
+corresponding upstream release is linked above. This identifies source and
+build instructions; it does not claim that the upstream AppImage was reproduced.
+
+Runtime dependencies retain their Guix licenses and notices. These include
+GNU libc (LGPL), GNU Bash (GPL), GCC runtime libraries (GPL with the GCC Runtime
+Library Exception), and the X11, Mesa, LLVM, compression and font dependencies.
+The application package also carries the bundled font notices extracted from
+`epaint_default_fonts` 0.29.1. Preserve these notices when redistributing outputs.
