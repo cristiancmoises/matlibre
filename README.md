@@ -45,7 +45,14 @@ Load the library in your Emacs init:
 ```
 
 For a manual installation, add the checkout's `lisp` directory to `load-path`
-first. With a Guix profile, make sure Emacs sees that profile's site-lisp
+first:
+
+```elisp
+(add-to-list 'load-path "/path/to/matlibre/lisp")
+(require 'matlivre)
+```
+
+Start a terminal session with `emacs -nw`, then run `M-x matlibre`. With a Guix profile, make sure Emacs sees that profile's site-lisp
 subdirectories. See [installation and usage](docs/usage.md) for details.
 
 ## A quick session

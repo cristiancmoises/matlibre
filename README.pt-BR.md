@@ -45,7 +45,14 @@ Adicione ao seu arquivo de inicialização do Emacs:
 ```
 
 Na instalação manual, adicione antes o diretório `lisp` deste projeto ao
-`load-path`. Com um perfil Guix, verifique se o Emacs encontra os subdiretórios
+`load-path`:
+
+```elisp
+(add-to-list 'load-path "/caminho/para/matlibre/lisp")
+(require 'matlivre)
+```
+
+Para usar no terminal, abra `emacs -nw` e execute `M-x matlibre`. Com um perfil Guix, verifique se o Emacs encontra os subdiretórios
 de `share/emacs/site-lisp`. Veja o [guia de uso](docs/usage.pt-BR.md).
 
 ## Primeira sessão
