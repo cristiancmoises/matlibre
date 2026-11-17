@@ -89,9 +89,13 @@ confiável. Caminhos relativos usam o diretório em que a conexão começou;
 use `cd` explicitamente quando necessário. Documentos binários `.mlx` abrem
 no editor nativo, sem serem avaliados como texto pelo Emacs.
 
-Um build bem-sucedido no Guix não publica automaticamente substitutos binários.
-A [documentação de empacotamento](docs/packaging.md) descreve os requisitos
-do runtime e da buildfarm.
+Os dois pacotes estão na [buildfarm](https://farm.securityops.co/), com metadados
+assinados para o [MatLivre](https://substitutes.securityops.co/6jn768is8g2ryb43qxgwf06hizbp8g8p.narinfo)
+e o [MatLibre para Emacs](https://substitutes.securityops.co/nqrwva2r772i336apii74rayi9mxlbnq.narinfo).
+Cada narinfo informa o caminho exato no store e o endereço do NAR público.
+A [documentação de empacotamento](docs/packaging.md) identifica as revisões Guix
+e as fontes correspondentes. A receita usada pelo cliente precisa gerar o mesmo
+caminho para aproveitar aquele substituto binário.
 
 ## Desenvolvimento
 

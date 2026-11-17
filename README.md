@@ -89,9 +89,13 @@ Relative paths use the directory where the connection started. Set `cd`
 explicitly when your work needs another directory. Binary `.mlx` files open
 in the native editor rather than being evaluated as text.
 
-Guix package builds do not by themselves make public binary substitutes
-available. [Packaging notes](docs/packaging.md) explain the runtime dependency
-and build-farm requirements.
+Both packages are listed on the [build farm](https://farm.securityops.co/), with
+signed metadata for [MatLivre](https://substitutes.securityops.co/6jn768is8g2ryb43qxgwf06hizbp8g8p.narinfo)
+and [MatLibre for Emacs](https://substitutes.securityops.co/nqrwva2r772i336apii74rayi9mxlbnq.narinfo).
+Each narinfo identifies the exact store path and public NAR URL.
+[Packaging notes](docs/packaging.md) identify the Guix revisions and corresponding
+source. Your package recipe must produce the same store path to use that binary
+substitute.
 
 ## Development
 
