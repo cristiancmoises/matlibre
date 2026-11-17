@@ -78,3 +78,8 @@
         (matlivre-stop)
         (when (and process (process-live-p process)) (delete-process process))
         (delete-file file)))))
+
+(ert-deftest matlibre-public-entry-point ()
+  "The documented M-x entry point must be available after loading the library."
+  (should (commandp 'matlibre))
+  (should (eq (indirect-function 'matlibre) (indirect-function 'matlivre))))
